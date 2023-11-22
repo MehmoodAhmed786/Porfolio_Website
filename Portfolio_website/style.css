@@ -1,0 +1,305 @@
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  body {
+    
+    background-color: #E3F2FD;
+    
+  }
+    
+  header {
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero {
+    background-color: #202020;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #202020;
+    border-radius: 20px; 
+    overflow: hidden; 
+  }
+  
+  .hero .image {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.hero .image img {
+    width: 100%;
+    height: auto;
+}
+
+
+  .hero .text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .hero .text h2 {
+    color:#fff ;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .hero .text p {
+    color: #fff;
+    font-size: 16px;
+
+  }
+  
+  .hero .text a {
+    font-size: 14px;
+    color: white;
+    background-color: #202020;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .hero .image img {
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .hero .image img:hover {
+    filter: brightness(0.5);
+    cursor: pointer;
+  }
+  
+  .hero .image img::after {
+    content: "Let's Connect";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    visibility: hidden;
+  }
+  
+  .hero .image img:hover::after {
+    visibility: visible;
+    opacity: 1;
+  }
+  /* Style the "Lets Connect" link within the .hero class */
+.hero a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8c8e91;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Add hover effect */
+.hero a:hover {
+    background-color: #4d4d4d;
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Add a subtle box shadow */
+.hero a:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+  
+  .image {
+    width: 50%;
+  }
+  
+  .text {
+    width: 50%;
+    padding: 0 20px;
+  }
+  
+  .about,
+  .portfolio {
+    padding: 20px;
+  }
+  .portfolio .item img {
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .portfolio .item:hover img {
+    filter: brightness(0.5);
+    cursor: pointer;
+  }
+  
+  .portfolio .item:hover img::after {
+    content: "Let's Connect";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .portfolio .item:hover img::after {
+    opacity: 1;
+  }
+  
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .item {
+    text-align: center;
+  }
+  
+  .item img {
+    width: 100%;
+  }
+
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .about {
+    background-color: #202020;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Add rounded corners */
+    color: #ffffff; /* Text color */
+    text-align: center; /* Center align text */
+}
+
+.about h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.about p {
+    font-size: 18px; /* Increase font size for better readability */
+    line-height: 1.6; /* Increase line height for better spacing */
+}
+
+.about .skills {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px; /* Add spacing above the skills list */
+    display: flex; /* Display skills horizontally */
+    flex-wrap: wrap; /* Wrap skills to the next line if necessary */
+    justify-content: center; /* Center-align skills */
+}
+
+.about .skills li {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: Hex #dd7973;
+    margin: 5px;
+    font-size: 16px; /* Adjust font size for skills */
+    font-weight: bold; /* Make skills bold */
+    white-space: nowrap; /* Prevent skills from wrapping */
+}
+
+.about .skills li:hover {
+    background-color: #4d4d4d; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media li {
+    margin: 0 10px; /* Add spacing between icons */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-media li a {
+    text-decoration: none;
+    color: #333; /* Default icon color */
+    font-size: 24px;
+}
+
+.social-media li a:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+    color: #007bff; /* Change icon color on hover */
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border: 5px white solid;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    animation: floatHorizontal 6s ease-in-out infinite;
+    margin: 0 auto; /* Center the avatar horizontally */
+}
+
+@keyframes floatHorizontal {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px); /* Adjust the horizontal distance */
+    }
+}
+
+.avatar img {
+    width: 100%;
+    height: auto;
+}
+
+
+      
